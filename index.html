@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <style>
+        header h1{
+            color:green;
+        }
+        #food-title{
+            color:rgb(80, 97, 252);
+        }
+        .bg-red{
+            background-color:red;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>This is my header Not Banner</h1>
+    </header>
+    <main>
+        <h1>Welcome To My DOM</h1>
+        <ul>
+            <li>safayat</li>
+            <li>jalali set</li>
+            <li>bonobas</li>
+            <li>Robin Hud</li>
+        </ul>
+    </main>
+
+    <section>
+        <h1 id="food-title">My Favarit Food's</h1>
+        <ul>
+        <li>Rice</li>
+        <li>Meat</li>
+        <li>Fish</li>
+        <li class="some-favarit">Lantis</li>
+        <li class="some-favarit">Vagitables</li>
+        <li class="some-favarit"><span>Biriany</span></li>
+        <li class="some-favarit">Jalmuri</li>
+        </ul>
+
+    </section>
+    <section id="countrys" class="lllll">
+        <h1 id="rony">Countrys Name is Here</h1>
+
+        <ul>
+            <li class="favarit-des"><span>Bangladesh</span></li>
+            <li id="indea">indea</li>
+            <li class="favarit-des">Pakisthan</li>
+            <li class="favarit-des">Newzelend</li>
+            <li class="china">China</li>
+            <li class="favarit-des"><span>Soudi Arbo</span></li>
+            <li class="favarit-des">Turky</li>
+            <li class="null">Kobor</li>
+        </ul>
+    </section>
+
+    <script>
+        console.log("this is my frist angta of javascript")
+
+        let student={
+            name: 'rony mia',
+            roll:709660,
+            id: 45,
+            study: function(subject){
+                console.log('starding subject ',subject)
+            }
+        }
+
+        let lists = document.getElementsByTagName("li")
+        console.log(lists);
+
+        for(let single_list of lists){
+            console.log(single_list);
+        }
+
+        //foode title 
+        let food=document.getElementById('food-title');
+        food.innerText="Food is Good For Our Health But Over Food Not Good";
+        console.log(food.innerText);
+
+        //Use case of Casss
+
+        let olpo_valo= document.getElementsByClassName('some-favarit');
+        olpo_valo.innerText="Ei khabar gula Maje Maje valo lage ar maje maje Valo Lage na"
+        console.log(olpo_valo.innerText);
+
+        for(let item of olpo_valo){
+            console.log(item.innerText);
+        }
+
+        //Countrys Name niya kas suru
+
+        let hindu=document.getElementById('indea');
+        hindu.innerText='salara khub kharap';
+        console.log(hindu.innerText);
+
+        let copy=document.getElementsByClassName('china');
+        copy.innerText='Chinar Manus der Giray giray brain';
+        console.log(copy.innerText);
+
+        let ses_thikana=document.getElementsByClassName('kobor');
+        ses_thikana.innerText='manuser Ses Thikana hosse kobor Jekhane kono jomidari kaje lage na';
+        console.log(ses_thikana.innerText);
+
+        //favarit des
+        let f_country=document.getElementsByClassName('favarit-des');
+        console.log(f_country);
+
+        for(let single_c of f_country){
+            single_c.innerText='my favarit country '+single_c.innerText;
+            console.log(single_c.innerText);
+        } 
+
+
+        let robin=document.querySelectorAll('.lllll #rony')[0];
+        robin.innerText='eita hosse amr Pori borton kora code ja ami js diya kori';
+
+    </script>
+
+    <script src="./frist.js"></script>
+    <script src="child.js"></script>
+</body>
+</html>
